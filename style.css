@@ -21,8 +21,7 @@ main {
 }
 .container {
   width: 870px;
-  background-color: rgba(187, 126, 126, 0.5);
-  border-radius: 5px;
+  border-radius: 18px;
   margin-top: 36px;
   padding: 0 30px;
   margin-bottom: 21px;
@@ -33,17 +32,20 @@ main {
 }
 hr {
   width: 807px;
-  border: 1px solid rgb(126, 123, 123);
+  border: 1px solid rgb(104, 74, 74);
   text-align: center;
   margin-top: 30px;
 }
 
 /* navigation area styles */
+.one {
+  background-color: hsla(187, 80%, 70%, 0.3);
+}
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(223, 145, 145);
+  background-color: rgba(132, 224, 96, 0.836);
 }
 .logo-area {
   display: flex;
@@ -95,9 +97,9 @@ nav li a:hover {
   background-color: #fff;
 }
 
-nav ul img:hover{
+nav ul img:hover {
   transform: scale(1.2);
-   transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* top players and top blogs styles */
@@ -114,9 +116,9 @@ nav ul img:hover{
   width: 56px;
   height: 56px;
   margin-right: 16px;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
-.player img:hover{
+.player img:hover {
   transform: scale(1.2);
 }
 .player-name {
@@ -138,6 +140,7 @@ nav ul img:hover{
 }
 .blog {
   display: flex;
+  
 }
 .blog-thumbnail img {
   width: 177px;
@@ -159,6 +162,9 @@ nav ul img:hover{
 }
 
 /* latest courses area */
+.two {
+  background-color: #00d8d485;
+}
 
 .courses {
   display: grid;
@@ -215,9 +221,11 @@ nav ul img:hover{
 }
 
 /* customar-review section style  */
-.customar-satisfaction{
+.three {
+  background-color: rgba(187, 126, 126, 0.5);
+}
+.customar-satisfaction {
   margin-bottom: 40px;
-  
 }
 .satisfactions {
   display: grid;
@@ -225,18 +233,19 @@ nav ul img:hover{
   grid-column-gap: 36px;
   grid-row-gap: 40px;
 }
-.satisfaction{
+.satisfaction {
   background-color: #59cca665;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   overflow: hidden;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
-.satisfaction:hover{
+.satisfaction:hover {
   transform: scale(1.1);
 }
-.customar-comment{
+.customar-comment {
   font-size: 16px;
   text-align: left;
   line-height: 24px;
@@ -251,7 +260,7 @@ nav ul img:hover{
   border-radius: 50%;
   margin-right: 20px;
 }
-.customar-name{
+.customar-name {
   font-size: 16px;
   margin-bottom: 4px;
 }
@@ -260,15 +269,70 @@ nav ul img:hover{
   font-size: 14px;
   text-decoration: none;
 }
+/* ---------------------------------------------------------------
+                             footer area
+  ------------------------------------------------*/
+
+.dark-footer {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  margin-top: 50px;
+}
+.about-company {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+.list h2 {
+  color: #fff;
+  font-size: 20px;
+}
+.list ul {
+  list-style-type: none;
+  padding: 0;
+}
+.list li a {
+  font-size: 14px;
+  color: #9f9f9fdc;
+  text-decoration: none;
+}
+.list li a:hover {
+  opacity: 0.5;
+}
+.list p {
+  font-size: 14px;
+  color: #9f9f9fa8;
+}
+.copyright-area {
+  color: #9f9f9f;
+  text-align: center;
+}
+.social-media {
+  font-size: 24px;
+}
+.social-media a {
+  margin-right: 10px;
+}
+.copyright-text {
+  font-size: 14px;
+  color: #9f9f9fa8;
+  padding-bottom: 50px;
+}
 /* media quaries for mobile devices */
 
 @media only screen and (max-width: 688px) {
- .section-title{
-   margin-top: 0;
- }
+  .section-title {
+    margin-top: 0;
+  }
   header {
     display: block;
   }
+
+  /* media quaries on nav bar  */
+
   .logo-area {
     margin-left: 20px;
   }
@@ -307,6 +371,9 @@ nav ul img:hover{
     width: 100%;
     padding: 30px;
   }
+
+  /* media quries on players  */
+
   .top-players {
     margin-bottom: 10px;
   }
@@ -324,6 +391,8 @@ nav ul img:hover{
     margin: 10px 0;
   }
 
+  /* media quries on blogs  */
+
   .blogs {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -335,7 +404,10 @@ nav ul img:hover{
     line-height: normal;
     margin-bottom: 15px;
   }
- .courses{
+
+  /* media quries on courses  */
+
+  .courses {
     margin-bottom: 0;
   }
   .courses {
@@ -351,13 +423,35 @@ nav ul img:hover{
   .course-thumbnail img {
     width: 80%;
   }
-  .customar-satisfaction{
+
+  /* media quries on customer riview */
+
+  .customar-satisfaction {
     margin-bottom: 0;
   }
-  .satisfactions{
+  .satisfactions {
     width: 100%;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
+  }
+
+  /* media quries on footer  */
+.dark-footer{
+  width: 100%;
+}
+.about-company {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+  .list {
+    text-align: center;
+  }
+  .company-name {
+    width: 100%;
+    margin-left: 100px;
   }
 }
 
@@ -404,5 +498,4 @@ nav ul img:hover{
   .course-thumbnail img {
     width: 80%;
   }
-
 }
