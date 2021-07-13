@@ -9,6 +9,10 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   background-color: #f3f1ff;
+  background-image: url(images/icons/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 main {
   display: flex;
@@ -91,10 +95,16 @@ nav li a:hover {
   background-color: #fff;
 }
 
+nav ul img:hover{
+  transform: scale(1.2);
+   transition: transform .3s ease-in-out;
+}
+
 /* top players and top blogs styles */
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10px;
 }
 .player {
   display: flex;
@@ -104,6 +114,10 @@ nav li a:hover {
   width: 56px;
   height: 56px;
   margin-right: 16px;
+  transition: transform .3s ease-in-out;
+}
+.player img:hover{
+  transform: scale(1.2);
 }
 .player-name {
   font-size: 18px;
@@ -111,7 +125,7 @@ nav li a:hover {
 
 /* Top blogs styles */
 .top-blogs {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   margin-left: 0;
 }
 
@@ -138,7 +152,7 @@ nav li a:hover {
   line-height: 34px;
 }
 .blog-author span {
-  color: rgba(161, 151, 151, 0.89);
+  color: rgba(71, 68, 68, 0.89);
 }
 .blog-author a {
   text-decoration: none;
@@ -150,7 +164,7 @@ nav li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 .course {
   height: 269px;
@@ -200,9 +214,58 @@ nav li a:hover {
   background-color: rgba(235, 129, 151, 0.548);
 }
 
+/* customar-review section style  */
+.customar-satisfaction{
+  margin-bottom: 40px;
+  
+}
+.satisfactions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 36px;
+  grid-row-gap: 40px;
+}
+.satisfaction{
+  background-color: #59cca665;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  overflow: hidden;
+  transition: transform .5s ease-in-out;
+}
+.satisfaction:hover{
+  transform: scale(1.1);
+}
+.customar-comment{
+  font-size: 16px;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.customar-details {
+  display: flex;
+}
+.customar-details img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.customar-name{
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.customar-details a {
+  color: #2a15e9;
+  font-size: 14px;
+  text-decoration: none;
+}
 /* media quaries for mobile devices */
 
 @media only screen and (max-width: 688px) {
+ .section-title{
+   margin-top: 0;
+ }
   header {
     display: block;
   }
@@ -237,13 +300,12 @@ nav li a:hover {
   nav ul img {
     margin-right: 20px;
   }
- #toggle:checked + nav {
+  #toggle:checked + nav {
     display: block;
   }
   .container {
     width: 100%;
     padding: 30px;
-    display: none;
   }
   .top-players {
     margin-bottom: 10px;
@@ -273,6 +335,9 @@ nav li a:hover {
     line-height: normal;
     margin-bottom: 15px;
   }
+ .courses{
+    margin-bottom: 0;
+  }
   .courses {
     width: 100%;
     display: flex;
@@ -281,9 +346,18 @@ nav li a:hover {
   }
   .course {
     width: 100%;
+    margin-bottom: 20px;
   }
   .course-thumbnail img {
     width: 80%;
+  }
+  .customar-satisfaction{
+    margin-bottom: 0;
+  }
+  .satisfactions{
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
   }
 }
 
@@ -325,8 +399,10 @@ nav li a:hover {
   }
   .course {
     width: 100%;
+    margin-bottom: 20px;
   }
   .course-thumbnail img {
     width: 80%;
   }
+
 }
